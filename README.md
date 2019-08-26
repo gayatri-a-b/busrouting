@@ -1,6 +1,8 @@
 # busrouting
 
-A Flask-based website that solves an application of the Traveling Salesman Problem. Given a list input of addresses (a bus roster), a starting point, and an ending point, the application generates an interactive map with directions for getting from point-to-point the shortest distance. 
+A Flask-based website that solves an application of the Traveling Salesman Problem.
+
+Given a list input of addresses (a bus roster), a starting point, and an ending point, the application generates an interactive map with directions for getting from point-to-point the shortest distance. 
 This was my CS50 final project.
 
 ## Accessing the application 
