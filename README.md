@@ -32,47 +32,41 @@ Hit "RESET" to reset the attendance.
 2) `/camper_registration`
 PURPOSE: registering/unregistering campers. Changes made here will be automatically reflected on this page and in /admin_dashboard
 
-Add Camper: enter the name and drop-off location for each camper. 
-Hit "REGISTER" to register the camper.
-
-Remove Camper: select which camper to remove.
-Hit "REMOVE" to remove the camper.
+* Add Camper: enter the name and drop-off location for each camper. Hit "REGISTER" to register the camper.
+* Remove Camper: select which camper to remove. Hit "REMOVE" to remove the camper.
 
 
 3) `/driver_dashboard`
 PURPOSE: show the best point-to-point route for dropping off the camper at their respective drop-off locations
 
-Automatically updates/populates map with campers coming on the bus, starting location, and final destination. Leaflet Routing-provided navigation itinerary with ability for the driver to click x for the campers dropped off. Blue dot traces the route. natigation bar allows.
-
-Adding points to the map or dragging the route is intentionally disabled.
+* Automatically updates/populates map with campers coming on the bus, starting location, and final destination. Leaflet Routing-provided navigation itinerary with ability for the driver to click x for the campers dropped off. Blue dot traces the route.
+* Adding points to the map or dragging the route is intentionally disabled.
 
 
 4) `/driver_destination`
 PURPOSE: allows admin to change the address of the final stop for the bus (dropping off counselors). Changes will be reflected on the page under "Current Destination Address" and in the Harvard waypoint on the map in /driver_dashboard.
 
-Set Destination: enter address. Hit "SET/RESET"
+* Set Destination: enter address. Hit "SET/RESET"
 
 
 5) `/logout`
 PURPOSE: facilitate logout
 
-Log out feature located in navigation bar.
+* Log out feature located in navigation bar.
 
 
 ### DRIVER PORTAL
 1) `/driver_dashboard` or `/
 PURPOSE: show the best point-to-point route for dropping off the camper at their respective drop-off locations
 
-Automatically updates/populates map with campers coming on the bus, starting location, and final destination. Leaflet Routing-provided navigation itinerary with ability for the driver to click x for the campers dropped off. Blue dot traces the route.
+* Automatically updates/populates map with campers coming on the bus, starting location, and final destination. Leaflet Routing-provided navigation itinerary with ability for the driver to click x for the campers dropped off. Blue dot traces the route.
 natigation bar allows.
-
-Adding points to the map or dragging the route is intentionally disabled.
+* Adding points to the map or dragging the route is intentionally disabled.
 
 
 2) `/logout`
 PURPOSE: facilitate logout
-
-Log out feature located in navigation bar.
+* Log out feature located in navigation bar.
 
 
 ## MAPS HTTPS REQUIREMENT
