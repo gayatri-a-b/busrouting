@@ -25,7 +25,7 @@ Once logged in, there is a navigation bar at the top.
 1) `/admin_dashboard` or `/`
 PURPOSE: taking attendance to mark which students will be on the bus. Changes made here (upon resetting or locking in the attendance) will be automatically reflected under "Bus Roster" and "NOT ON BUS" on this page, and in the map in /driver_dashboard.
 
-Bus Attendance: select the checkmarks for which students will be riding the bus Hit "LOCK" to lock in the attendance.
+* Bus Attendance: select the checkmarks for which students will be riding the bus Hit "LOCK" to lock in the attendance.
 Hit "RESET" to reset the attendance.
 
 
