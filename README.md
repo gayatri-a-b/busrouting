@@ -22,7 +22,7 @@ Once logged in, there is a navigation bar at the top.
 ### ADMIN PORTAL
 1) `/admin_dashboard` or `/`
 
-* PURPOSE: taking attendance to mark which students will be on the bus. Changes made here (upon resetting or locking in the attendance) will be automatically reflected under "Bus Roster" and "NOT ON BUS" on this page, and in the map in /driver_dashboard.
+* Take attendance to mark which students will be on the bus. Changes made here (upon resetting or locking in the attendance) will be automatically reflected under "Bus Roster" and "NOT ON BUS" on this page, and in the map in `/driver_dashboard`.
 
    * Bus Attendance: select the checkmarks for which students will be riding the bus Hit "LOCK" to lock in the attendance.
 Hit "RESET" to reset the attendance.
@@ -30,7 +30,7 @@ Hit "RESET" to reset the attendance.
 
 2) `/camper_registration`
 
-* PURPOSE: registering/unregistering campers. Changes made here will be automatically reflected on this page and in /admin_dashboard
+* Register/unregister campers. Changes made here will be automatically reflected on this page and in `/admin_dashboard`.
 
    * Add Camper: enter the name and drop-off location for each camper. Hit "REGISTER" to register the camper.
    * Remove Camper: select which camper to remove. Hit "REMOVE" to remove the camper.
@@ -38,7 +38,7 @@ Hit "RESET" to reset the attendance.
 
 3) `/driver_dashboard`
 
-* PURPOSE: show the best point-to-point route for dropping off the camper at their respective drop-off locations
+* Show the best point-to-point route for dropping off the camper at their respective drop-off locations.
 
     * Automatically updates/populates map with campers coming on the bus, starting location, and final destination. Leaflet Routing-provided navigation itinerary with ability for the driver to click x for the campers dropped off. Blue dot traces the route.
     * Adding points to the map or dragging the route is intentionally disabled.
@@ -46,14 +46,14 @@ Hit "RESET" to reset the attendance.
 
 4) `/driver_destination`
 
-* PURPOSE: allows admin to change the address of the final stop for the bus (dropping off counselors). Changes will be reflected on the page under "Current Destination Address" and in the Harvard waypoint on the map in /driver_dashboard.
+* Allow admin to change the address of the final stop for the bus (dropping off counselors). Changes will be reflected on the page under "Current Destination Address" and in the Harvard waypoint on the map in /driver_dashboard.
 
     * Set Destination: enter address. Hit "SET/RESET"
 
 
 5) `/logout`
 
-* PURPOSE: facilitate logout
+* Facilitate logout.
 
     * Log out feature located in navigation bar.
 
@@ -61,7 +61,7 @@ Hit "RESET" to reset the attendance.
 ### DRIVER PORTAL
 1) `/driver_dashboard` or `/`
 
-* PURPOSE: show the best point-to-point route for dropping off the camper at their respective drop-off locations
+* Show the best point-to-point route for dropping off the camper at their respective drop-off locations.
 
     * Automatically updates/populates map with campers coming on the bus, starting location, and final destination. Leaflet Routing-provided navigation itinerary with ability for the driver to click x for the campers dropped off. Blue dot traces the route.
 natigation bar allows.
@@ -70,7 +70,7 @@ natigation bar allows.
 
 2) `/logout`
 
-* PURPOSE: facilitate logout
+* Facilitate logout.
     * Log out feature located in navigation bar.
 
 
@@ -78,8 +78,8 @@ natigation bar allows.
 The map feature requires a HTTPS connection. If you login with the default HTTP then the screen will prompt you to go to HTTPS. This means litterally go into the url and type "HTTPS://" in front of the url.
 This requirement is a safety feature of contemporary browsers, and you have to do this manually because the CS50 IDE directs URLs to using HTTP by default.
 
-## Note
-### Comment
+## Notes
+### Privacy
 The DRIVER does not have access to any of the ADMIN's content. They can only access `/driver_dashboard`.
 The ADMIN however, can access all of the DRIVER's content (which is just /driver_dashboard).
 This is for security reasons, dealing with minors.
