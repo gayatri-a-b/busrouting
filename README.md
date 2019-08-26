@@ -74,14 +74,17 @@ The map feature requires a HTTPS connection. If you login with the default HTTP 
 This requirement is a safety feature of contemporary browsers, and you have to do this manually because the CS50 IDE directs URLs to using HTTP by default.
 
 ## Note
-The DRIVER does not have access to any of the ADMIN's content. They can only access /driver_dashboard.
+### Comment
+The DRIVER does not have access to any of the ADMIN's content. They can only access `/driver_dashboard`.
 The ADMIN however, can access all of the DRIVER's content (which is just /driver_dashboard).
 This is for security reasons, dealing with minors.
 
-I had a specific problem in mind that I wanted to solve when I designed this application. It intended to be a solution for summer camps, such at the Phillips Brooks House Association Native American Youth Enrichment Program. Every morning and after the Harvard Shuttle would pick-up and drop-off camper to and from their individual household--located all over Boston. The Shuttle would always have as one point--whether start or end--Johnston Gate. But the other start/end point would often vary, coming from fieldtrips all over the place or the Condon School. Moreover, the bus roster was always changing--even between morning and evening--based on each student's individual family situation. And coming from fieldtrips, the usual bus route was completely different.
+### The Motivation Behind `busrouting`
+I had a specific problem in mind that I wanted to solve when I designed this application. It's intended to be a solution for summer camps, such at the Phillips Brooks House Association Native American Youth Enrichment Program. Every morning and after the Harvard Shuttle would pick-up and drop-off camper to and from their individual household--located all over Boston. The Shuttle would always have as one point--whether start or end--Johnston Gate. But the other start/end point would often vary, coming from fieldtrips all over the place or the Condon School. Moreover, the bus roster was always changing--even between morning and evening--based on each student's individual family situation. And coming from fieldtrips, the usual bus route was completely different.
 
 The bus driver often got lost, or we would go to stops that we didn't need to, or we would drive all the way back to the school after a fieldtrip just to stick to the bus route. And there was always a communication gap between the driver and us, the counselors. Most morning and afternoons took two hours or more each.
 
 This website application aims to solve that problem by making the route dynamic, and merging the step of taking attendance and routing. Moreover, the counselors can keep an eye on the campers while track of the route on their phone.
 
-This website derives many features from the CS50 Finance problem set.
+### Acknoledgement
+This website derives its concepts from the CS50 Finance problem set.
