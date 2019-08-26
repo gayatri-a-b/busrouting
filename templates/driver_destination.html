@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Destination
+{% endblock %}
+
+{% block main %}
+    <div class="row">
+        <div class="col-6">
+            <div>
+                <h1>Set Destination</h1>
+                <form action="/driver_destination" method="post">
+                    <div>
+                        <input class="form-control" name="final_destination_address" id="final_destination_address" placeholder="Street, City, State ZIP" type="text">
+                    </div>
+                    <button class="btn btn-primary" name="edit_action" value="add" id="add" type="submit"><b>SET/RESET</b></button>
+                </form>
+            </div>
+        </div>
+        <div class="col-6">
+                <h1>Current Destination Address</h1>
+                <p>{{ final_destination.address }}</p>
+        </div>
+    </div>
+{% endblock %}

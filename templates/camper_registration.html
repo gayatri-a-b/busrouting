@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+<!--ALLOWS ADMIN (CAMP COUNSELORS/STAFF) TO ADD/REMOVE CAMPERS FOR REGISTRATION, DISPLAYS REGISTARED CAMPERS-->
+{% block title %}
+    Camper Registration
+{% endblock %}
+
+{% block main %}
+    <div class="row">
+        <!--ALLOW ADD/REMOVE CAMPERS-->
+        <div class="col-6">
+            <!--add campers-->
+            <div>
+                <h1>Add Camper</h1>
+                <form action="/camper_registration" method="post">
+                    <div class="form-group">
+                        <input class="form-control" name="camper_name" placeholder="First Last" type="text">
+                    </div>
+                    <div>
+                        <input class="form-control" name="address" placeholder="Street, City, State ZIP" type="text">
+                    </div>
+                    <button class="btn btn-primary" name="edit_action" value="add" id="register" type="submit"><b>REGISTER</b></button>
+                </form>
+            </div>
+            <div>
+                <!--remove campers-->
+                <h1>Remove Camper</h1>
+                <form action="/camper_registration" method="post">
+                    {% for camper in campers %}
+                        {% if (camper.camper_name != "final_destination") %}
+                            <div class="form-check" method="post">
+                                <input class="form-check-input" name="removed_camper" type="radio" value="{{ camper.camper_name }}" id="{{ camper.camper_name }}">
+                                <label class="form-check-label" for="{{ camper.camper_name }}">{{ camper.camper_name }}</label>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    <button class="btn btn-primary" name="edit_action" value="remove" id="unregister" type="submit"><b>REMOVE</b></button>
+                </form>
+            </div>
+        </div>
+
+        <!--DISPLAY THE CAMP ROSTER-->
+        <div class="col-6">
+            <!--camp roster-->
+            <h1>Camp Roster</h1>
+            {% for camper in campers %}
+                {% if (camper.camper_name != "final_destination") %}
+                    <li>
+                       {{ camper.camper_name }}, {{ camper.address }}
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,43 @@
+.map {
+    height: 100vh;
+}
+
+.leaflet-control-attribution a {
+    display: none;
+}
+
+#busimage {
+    background-image: url("bus_background.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+    position: relative;
+    width: auto;
+    height: 100vh;
+    margin: auto;
+    overflow: visible;
+}
+
+#smallerinner {
+    background-image: none;
+    position: relative;
+    width: 50vw;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: auto;
+    background: rgba(100, 100, 0, 0.2);
+    border: 1px solid black;
+    top: 30%;
+}
+
+#login {
+    color: black;
+    font-size: 22px;
+    background-color: rgba(150, 150, 0, 0.3);
+    border: none;
+}
+
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}

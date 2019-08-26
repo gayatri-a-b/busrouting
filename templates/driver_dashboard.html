@@ -1,0 +1,23 @@
+{% extends "driver_layout.html" %}
+
+<!--DISPLAYS THE ROUTE MAP-->
+{% block title %}
+    Driver Dashboard
+{% endblock %}
+
+{% block main %}
+    <!--hidden element to transfer final destination information-->
+    <div class="container-fluid" id="hidden_value" style="display: none;" value="{{ elements_final }}"></div>
+
+    <!--map-->
+    <div class="container-fluid" id="mapsection" value="{{ elements }}">
+        <div id="map" class="map"></div>
+        <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+            integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+            crossorigin="">
+        </script>
+        <script src="/static/leaflet-routing-machine.js"></script>
+        <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+        <script src="/static/routing.js"></script>
+    </div>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+<!--ALLOWS ADMIN TO TAKE ATTENDANCE OF WHICH CAMPERS WILL BE ON THE BUS, DISPLAYS ON AND OFF-BUS ROSTERS-->
+{% block title %}
+    Admin Dashboard
+{% endblock %}
+
+{% block main %}
+    <div class="row">
+        <!--ALLOWS ADMIN TO CHECK WHICH STUDENTS WILL BE ON THE BUS-->
+        <div class="col-6">
+            <h1>Bus Attendance</h1>
+            <div class="form-check" action="/admin_dashboard" method="post">
+                {% for camper in campers %}
+                      {% if (camper.camper_name != "final_destination") %} <input class="form-check-input" type="checkbox" name="bus_campers" value="{{ camper.camper_name }}" id="{{ camper.camper_name }}" {% if (camper in bus_campers) %} checked {% endif %}>{{ camper.camper_name }}<br> {% endif %}
+                {% endfor %}
+            </div>
+            <button type="button" class="btn btn-primary" name="attendance_action" data-toggle="button" aria-pressed="false" value="lock" id="lock" onclick='lock()'>LOCK</button>
+            <button type="button" class="btn btn-danger" name="attendance_action" value="reset" id="reset" onclick='reset()'><center><b>RESET</b></center></button>
+        </div>
+
+        <!--DISPLAYS THE ON AND OFF-BUS ROSTERS-->
+        <div class="col-6">
+            <!--on bus roster-->
+            <div>
+                <h1>Bus Roster</h1>
+                {% for camper in bus_campers %}
+                    <!--these checks (if here and the if below) are because I store final_destination in the same sqlite data-table as the campers-->
+                    {% if (camper.camper_name != "final_destination") %}
+                        <li>
+                            {{ camper.camper_name }}, {{ camper.address }}
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <!--off bus roster-->
+            <div>
+                <h1>NOT ON BUS</h1>
+                {% for camper in offbus_campers %}
+                    {% if (camper.camper_name != "final_destination") %}
+                        <li>
+                            {{ camper.camper_name }}, {{ camper.address }}
+                        </li>
+                     {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

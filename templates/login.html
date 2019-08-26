@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+<!--SIMPLE LOGIN PAGE-->
+{% block title %}
+    WELCOME
+{% endblock %}
+
+{% block main %}
+    <!--outer class to get background image to format correctly on mobile and desktop-->
+    <div class="container-fluid" id=busimage>
+        <!--jumbotron is created in order to get centering to format correct on mobile and desktop-->
+        <div class="jumbotron" id="smallerinner">
+            <form action="/login" method="post">
+                <!--username-->
+                <div class="form-group">
+                    <input class="form-control" name="username" placeholder="Username" type="text">
+                </div>
+
+                <!--password-->
+                <div class="form-group">
+                    <input class="form-control" name="password" placeholder="Password" type="password">
+                </div>
+
+                <!--submit button-->
+                <center>
+                    <button class="btn btn-primary" id="login" type="submit"><b>DRIVE</b></button>
+                </center>
+            </form>
+        </div>
+    </div>
+{% endblock %}
