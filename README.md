@@ -21,6 +21,7 @@ Once logged in, there is a navigation bar at the top.
 
 ### ADMIN PORTAL
 1) `/admin_dashboard` or `/`
+
 PURPOSE: taking attendance to mark which students will be on the bus. Changes made here (upon resetting or locking in the attendance) will be automatically reflected under "Bus Roster" and "NOT ON BUS" on this page, and in the map in /driver_dashboard.
 
 * Bus Attendance: select the checkmarks for which students will be riding the bus Hit "LOCK" to lock in the attendance.
@@ -28,6 +29,7 @@ Hit "RESET" to reset the attendance.
 
 
 2) `/camper_registration`
+
 PURPOSE: registering/unregistering campers. Changes made here will be automatically reflected on this page and in /admin_dashboard
 
 * Add Camper: enter the name and drop-off location for each camper. Hit "REGISTER" to register the camper.
@@ -35,6 +37,7 @@ PURPOSE: registering/unregistering campers. Changes made here will be automatica
 
 
 3) `/driver_dashboard`
+
 PURPOSE: show the best point-to-point route for dropping off the camper at their respective drop-off locations
 
 * Automatically updates/populates map with campers coming on the bus, starting location, and final destination. Leaflet Routing-provided navigation itinerary with ability for the driver to click x for the campers dropped off. Blue dot traces the route.
@@ -54,7 +57,8 @@ PURPOSE: facilitate logout
 
 
 ### DRIVER PORTAL
-1) `/driver_dashboard` or `/
+1) `/driver_dashboard` or `/`
+
 PURPOSE: show the best point-to-point route for dropping off the camper at their respective drop-off locations
 
 * Automatically updates/populates map with campers coming on the bus, starting location, and final destination. Leaflet Routing-provided navigation itinerary with ability for the driver to click x for the campers dropped off. Blue dot traces the route.
