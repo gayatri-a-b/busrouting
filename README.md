@@ -3,7 +3,7 @@
 A Flask-based website that solves an application of the Traveling Salesman Problem.
 
 Given a list input of addresses (a bus roster), a starting point, and an ending point, the application generates an interactive map with directions for getting from point-to-point the shortest distance. 
-This was my CS50 final project.
+I made this to solve problems of accountability and routing that the Phillips Brooks House Association's Native American Youth Enrichment Program faced when I was a senior camp counselor there the prior summer.
 
 ## Accessing the application 
 Please use Chrome web brower.
